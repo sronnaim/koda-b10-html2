@@ -1,3 +1,5 @@
 # HTML 2
 
-Chessboard using HTML Table
+Chessboards using HTML Table and div-only elements
+
+![Chessboards preview](/assets/image.png)
