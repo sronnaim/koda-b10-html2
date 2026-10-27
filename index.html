@@ -3,14 +3,56 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Chessboard using HTML Table">
+        <meta name="description" content="Chessboards using HTML Table and only div">
         <title>HTML Chessboard</title>
+
+        <style>
+            .cb-div {
+                border: solid;
+                width: fit-content;
+            }
+
+            /* Chessboard row */
+            .cb-div > div {
+                width: fit-content;
+                height: 2rem;
+            }
+
+            /* Odd rows, odd cells */
+            .cb-div > div:nth-child(odd) > div:nth-child(odd) {
+                background-color: white;
+            }
+
+            /* Odd rows, even cells */
+            .cb-div > div:nth-child(odd) > div:nth-child(even) {
+                background-color: black;
+            }
+
+            /* Even rows, odd cells */
+            .cb-div > div:nth-child(even) > div:nth-child(odd) {
+                background-color: black;
+            }
+
+            /* Even rows, even cells */
+            .cb-div > div:nth-child(even) > div:nth-child(even) {
+                background-color: white;
+            }
+
+
+            /* Each cells */
+            .cb-div > div > div {
+                float: left;
+                height: 100%;
+                width: 2rem;
+            }
+        </style>
     </head>
 
     <body>
         <main>
+            <h1>HTML Chessboards</h1>
             <article>
-                <h1>HTML Chessboard</h1>
+                <h2>Table Chessboard</h2>
                 <table border="2" cellpadding="20" cellspacing="2">
                     <thead>
                         <tr>
@@ -99,7 +141,92 @@
                         </tr>
                     </tfoot>
                 </table>
-            </article>            
+            </article>
+            <article>
+                <h2>div-only Chessboard</h2>
+                <div class="cb-div">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </article>         
         </main>    
     </body>
 </html>
